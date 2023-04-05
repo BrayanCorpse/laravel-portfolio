@@ -1,0 +1,90 @@
+<div class="bg-light" style="padding: 1rem;">
+    @include('layouts.partials.header', ['sectionName' => 'MY Social', 'placeContent' => 'center', 'size' => 'clamp(1rem, 1rem + 7vw, 4rem);'])
+</div>
+  
+<section class="social-section bg-gray">
+  <div class="social-container">
+      <div class="tip">Links</div>
+      <div class="share-window">
+          <div class="share-bar">
+              <div class="trigger">
+                <a href="https://www.instagram.com/bryan.devcode/" target="_blank" rel="noopener noreferrer">
+                  <i class='bx bxl-instagram'></i>
+                </a>
+              </div>
+              <div class="trigger">
+                <a href="https://github.com/BrayanCorpse" target="_blank" rel="noopener noreferrer">
+                  <i class='bx bxl-github'></i>
+                </a>
+              </div>
+              <div class="trigger">
+                <a href="https://codepen.io/bryandevcode" target="_blank" rel="noopener noreferrer">
+                  <i class='bx bxl-codepen'></i>
+                </a>
+              </div>
+              <div class="trigger">
+                <a href="https://www.facebook.com/bryan.manzanocortes" target="_blank" rel="noopener noreferrer">
+                  <i class='bx bxl-facebook'></i>
+                </a>
+              </div>
+              <div class="trigger">
+                <a href="https://twitter.com/BrayanDevcode" target="_blank" rel="noopener noreferrer">
+                  <i class='bx bxl-twitter'></i>
+                </a>
+              </div>
+              <div class="trigger">
+                <a href=" https://wa.me/527224932750" target="_blank" rel="noopener noreferrer">
+                  <i class='bx bxl-whatsapp'></i>
+                </a>
+              </div>
+          </div>
+      </div>
+      <div class="like">
+          <div class="trigger like-btn">
+            <a href="#">
+              <i class='bx bxs-heart-circle'></i>
+              Like <span id="counter">0</span>
+            </a>
+          </div>
+      </div>
+  </div>
+  <div class="footer-note">
+      @include('layouts.partials.mailField')
+      <p class="copyleft">Developed with 
+        <i class='bx bx-heart-circle'></i> 
+        <small class="gft-font">Brayan Manzano</small> 
+         © 2023 - All rights reserved
+      </p> 
+  </div>
+  @include('layouts.partials.floatMail')
+</section>
+
+@push('js')
+<script>
+
+  const likeButton = document.querySelector('.like');
+  let likeCount = localStorage.getItem('likeCount') || 0;
+  const counter = document.getElementById('counter');
+  const heartIcon = document.querySelector('.bxs-heart-circle');
+
+  counter.innerText = `${likeCount}`;
+
+  likeButton.addEventListener('click', (e) => {
+
+    e.preventDefault();
+    likeCount++;
+
+    localStorage.setItem('likeCount', likeCount);
+    
+    counter.innerText = `${likeCount}`;
+
+    heartIcon.classList.add('like-heart');
+
+    setTimeout(() => {
+      heartIcon.classList.remove('like-heart');
+    }, 500);
+
+  });
+
+</script>
+@endpush
