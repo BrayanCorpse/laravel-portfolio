@@ -43,7 +43,7 @@
           <div class="trigger like-btn">
             <a href="#">
               <i class='bx bxs-heart-circle'></i>
-              Like <span id="counter">0</span>
+              Like <span id="counter">{{ App\Models\LikeCount::getCount() }}</span>
             </a>
           </div>
       </div>
@@ -59,30 +59,35 @@
   @include('layouts.partials.floatMail')
 </section>
 
+
 @push('js')
 <script>
 
   const likeButton = document.querySelector('.like');
-  let likeCount = localStorage.getItem('likeCount') || 0;
-  const counter = document.getElementById('counter');
+  const likeCount = document.getElementById('counter');
   const heartIcon = document.querySelector('.bxs-heart-circle');
 
-  counter.innerText = `${likeCount}`;
+  const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
   likeButton.addEventListener('click', (e) => {
 
     e.preventDefault();
-    likeCount++;
-
-    localStorage.setItem('likeCount', likeCount);
-    
-    counter.innerText = `${likeCount}`;
 
     heartIcon.classList.add('like-heart');
 
+    fetch('{{route('like')}}', { 
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-TOKEN': csrfToken
+      }
+    })
+      .then(response => response.json())
+      .then(data => likeCount.textContent = data.count);
+
     setTimeout(() => {
       heartIcon.classList.remove('like-heart');
-    }, 500);
+    }, 500)
 
   });
 

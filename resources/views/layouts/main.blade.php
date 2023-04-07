@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brayan Manzano</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{asset('css/spectre.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/spectre-exp.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/spectre-icons.min.css')}}">
