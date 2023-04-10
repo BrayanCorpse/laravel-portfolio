@@ -10,13 +10,13 @@
   <span class="article__day">MC</span>
 
   <div class="article__text">
-    <h1 class="article__title title">
-      The View
-    </h1>
+    <h3 class="article__title title">
+      Project Name
+    </h3>
 
-    <a href="" class="article__type github" target="_blank" rel="noopener noreferrer">Github</a>
+    <a href="#" class="article__type github" target="_blank" rel="noopener noreferrer">Github</a>
 
-    <a href="" class="article__button link" target="_blank" rel="noopener noreferrer">
+    <a href="#" class="article__button link" target="_blank" rel="noopener noreferrer">
       View
     </a>
 

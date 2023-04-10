@@ -1,12 +1,14 @@
 <div class="panel ">
   <div class="panel-header">
-    <div class="panel-title h4 gft-font">Educations</div>
+    <h4 class="panel-title h4 gft-font">Educations</h4>
   </div>
   <div class="panel-body">
 
     <div class="tile">
       <div class="tile-icon">
-        <figure class="avatar avatar-lg"><img src="https://picturepan2.github.io/spectre/img/avatar-1.png" alt="Avatar"></figure>
+        <figure class="avatar avatar-lg">
+          <img src="https://picturepan2.github.io/spectre/img/avatar-1.png" alt="Avatar" width="30" height="30">
+        </figure>
       </div>
       <div class="tile-content">
         <p class="tile-title">
@@ -19,7 +21,9 @@
 
     <div class="tile">
       <div class="tile-icon">
-        <figure class="avatar avatar-lg"><img src="https://picturepan2.github.io/spectre/img/avatar-4.png" alt="Avatar"></figure>
+        <figure class="avatar avatar-lg">
+          <img src="https://picturepan2.github.io/spectre/img/avatar-4.png" alt="Avatar" width="30" height="30">
+        </figure>
       </div>
       <div class="tile-content">
         <p class="tile-title">
@@ -32,7 +36,9 @@
 
     <div class="tile">
       <div class="tile-icon">
-        <figure class="avatar avatar-lg"><img src="https://picturepan2.github.io/spectre/img/avatar-2.png" alt="Avatar"></figure>
+        <figure class="avatar avatar-lg">
+          <img src="https://picturepan2.github.io/spectre/img/avatar-2.png" alt="Avatar" width="30" height="30">
+        </figure>
       </div>
       <div class="tile-content">
         <p class="tile-title">
