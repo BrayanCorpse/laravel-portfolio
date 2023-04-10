@@ -2,6 +2,12 @@
 
 @section('content')
 
+<header class="header-bmc">
+  <div class="logo-bmc">
+    <img src="{{asset('images/BMC.png')}}" alt="Brayan Manzano" width="100" height="100">
+  </div>
+</header>
+
     <section class="section intro">
         <h1 class="section-heading gft-font">
             Brayan Mc

@@ -1,10 +1,28 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+    <script src="https://www.googletagmanager.com/gtag/js?id=G-82X6D7FLZN" async=""></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-82X6D7FLZN")</script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="📌 Hey there, I’m Brayan Manzano! First of all, thanks for visiting my personal website. I’m a Mexican ICT Engineer, Frontend, Backend Developer." name="description">
+    <meta content="Brayan Manzano,Web Developer,HTML,CSS,JavaScript,Laravel, MySQL,PHP, Desarrollador web, base de datos" name="keywords">
+    <meta content="Brayan Manzano" name="author">
+    <meta content="Brayan Manzano Web Developer" property="og:title">
+    <meta content="https://brayanmanzano.dev" property="og:url">
+    <link href="https://brayanmanzano.dev" rel="canonical">
+    <link rel="alternate" href="https://brayanmanzano.dev" hreflang="es-mx">
+    <meta name="robots" content="index,follow">
+    <meta content="website" property="og:type">
+    <meta content="{{asset('apple-touch-icon.png')}}" property="og:image">
+    <meta content="Brayan Manzano Web Developer." property="og:description">
     <title>Brayan Manzano</title>
+    <link rel="shortcut icon" href="favicon.ico" type="{{asset('favicon.ico')}}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('apple-touch-icon.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('favicon-16x16.png')}}">
+    <meta name="msapplication-TileColor" content="#807FE2">
+    <meta name="theme-color" content="#807FE2">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{asset('css/spectre.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/spectre-exp.min.css')}}">
@@ -20,7 +38,7 @@
     @yield('content')
   </div>
    
-  <script src="{{asset('js/index.js')}}"></script> 
+  {{-- <script src="{{asset('js/index.js')}}"></script>  --}}
   <script src="{{asset('js/cursor.js')}}"></script>
   @stack('js')
 </body>

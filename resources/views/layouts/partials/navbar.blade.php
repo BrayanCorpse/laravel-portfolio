@@ -1,5 +1,5 @@
 <div class="oop"></div>
-    <nav class="navbar-main">
+    {{-- <nav class="navbar-main">
         <div class="navbar-container">
             <div class="navbar-menu right gft-font">
                 <a href="#" id="openMenu">Menu</a>
@@ -46,6 +46,6 @@
                 </div>
             </div>
         </div>
-    </nav>
+    </nav> --}}
 
     
