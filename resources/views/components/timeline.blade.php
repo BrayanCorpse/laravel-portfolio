@@ -8,8 +8,8 @@
             <div class="column col-8 col-sm-12">
               <br>
               <div class="timeline">
-                <div class="timeline-item" id="timeline-example-1">
-                  <div class="timeline-left"><a class="timeline-icon tooltip" href="#timeline-example-1" data-tooltip="2022 - 2023"></a></div>
+                <div class="timeline-item" id="Bisturi-News">
+                  <div class="timeline-left"><a class="timeline-icon tooltip" href="#Bisturi-News" data-tooltip="2022 - 2023"></a></div>
                   <div class="timeline-content">
                     <div class="tile">
                       <div class="tile-content">
@@ -19,7 +19,7 @@
                         </p>
                         <p class="tile-title">
                           <a href="https://bisturinoticias.com/" target="_blank" rel="noopener noreferrer">Bisturí Noticias</a>: 
-                          Website development for Bisturí News
+                          Website development for Bisturi News
                         </p>
                       </div>
                     </div>
@@ -30,8 +30,8 @@
                     </a>
                   </div>
                 </div>
-                <div class="timeline-item" id="timeline-example-2">
-                  <div class="timeline-left"><a class="timeline-icon icon-lg tooltip" href="#timeline-example-2" data-tooltip="2021 - 2022"><i class="icon icon-check"></i></a></div>
+                <div class="timeline-item" id="P51">
+                  <div class="timeline-left"><a class="timeline-icon icon-lg tooltip" href="#P51" data-tooltip="2021 - 2022"><i class="icon icon-check"></i></a></div>
                   <div class="timeline-content">
                     <div class="tile">
                       <div class="tile-content">
@@ -52,8 +52,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="timeline-item" id="timeline-example-3">
-                  <div class="timeline-left"><a class="timeline-icon icon-lg tooltip" href="#timeline-example-3" data-tooltip="2020 - 2021"><i class="icon icon-check"></i></a></div>
+                <div class="timeline-item" id="health-clinic">
+                  <div class="timeline-left"><a class="timeline-icon icon-lg tooltip" href="#health-clinic" data-tooltip="2020 - 2021"><i class="icon icon-check"></i></a></div>
                   <div class="timeline-content">
                     <div class="tile">
                       <div class="tile-content">
