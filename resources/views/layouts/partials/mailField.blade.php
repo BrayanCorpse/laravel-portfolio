@@ -5,9 +5,16 @@
 
 <div class="send-container">
 	<div class="container__item">
-		<form class="form">
-			<input type="email" class="form__field" placeholder="Your E-Mail Address" />
+		<form action="{{ route('sendMail') }}" method="POST" class="form"> 
+			@csrf 
+			@method('POST')
+			<input type="email" name="email" value="{{ old('email') }}" class="form__field" 
+					placeholder="Your E-Mail Address" />
 			<button type="submit" class="send-btn btn--primary btn--inside uppercase send-btn">Send</button>
 		</form>
 	</div>
 </div>
+
+
+
+

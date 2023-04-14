@@ -566,6 +566,7 @@ p code {
 .article__day,
 .article__pager {
   font-size: 10px;
+  font-weight: 500;
   color: #c6c6c6;
   text-transform: uppercase;
   text-decoration: none;
@@ -768,15 +769,17 @@ p code {
 .code-editor .lines > .line > span {
   white-space: normal;
   word-wrap: break-word;
+  padding: 5px;
 }
 .code-editor .lines > .line > a{
   text-decoration: none;
   cursor: auto;
+  padding: 5px;
 }
 .code-editor .lines .linenumber {
   color: #626675;
   font-weight: normal;
-  width: 30px;
+  width: 50px;
   display: inline-block;
 }
 .code-editor .comment {

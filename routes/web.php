@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LikeController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,6 @@ Route::get('/', function () {
 });
 
 Route::post('/like', [LikeController::class, 'like'])->name('like');
+
+Route::post('/sendMail', [ContactController::class, 'sendMail'])->name('sendMail');
+
