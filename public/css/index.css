@@ -566,7 +566,7 @@ p code {
 .article__day,
 .article__pager {
   font-size: 10px;
-  font-weight: 500;
+  font-weight: 600;
   color: #c6c6c6;
   text-transform: uppercase;
   text-decoration: none;
@@ -764,22 +764,22 @@ p code {
 }
 .code-editor .lines > .line {
   white-space: nowrap;
-  margin-top: 10px;
+  margin: 18px
 }
 .code-editor .lines > .line > span {
   white-space: normal;
   word-wrap: break-word;
-  padding: 5px;
 }
 .code-editor .lines > .line > a{
   text-decoration: none;
   cursor: auto;
   padding: 5px;
+  margin-bottom: 10px;
 }
 .code-editor .lines .linenumber {
   color: #626675;
   font-weight: normal;
-  width: 50px;
+  width: 30px;
   display: inline-block;
 }
 .code-editor .comment {
@@ -1118,6 +1118,11 @@ left: 225px;
     margin: 10px;
 }
 
+.toast.toast-my-error {
+  background: #ec4373;
+  border-color: #ec4373;
+}
+
 @media only screen and (max-width: 600px) {
     .btn--primary {
         padding: 10px 25px;
@@ -1125,9 +1130,19 @@ left: 225px;
     .form__field {
         width: 300px;
     }
-
     .header-bmc {
       display: none;
+    }
+    .logo {
+      position: relative;
+      top: 0;
+      left: 70%;
+      transform: translate(-50%, -230%);
+      width: 100px;
+    }
+    .editor {
+      padding-bottom: 0;
+      margin-bottom: -80px;
     }
   }
 

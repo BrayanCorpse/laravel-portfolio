@@ -9,58 +9,58 @@
           <span class="comment">// Technologies I Love 💙 To Use</span>
         </li>
         <li class="line"><span class="linenumber">2</span>
-          <a href="javascript:void(0)">
-            <span class="skill" id="0" style="color: #F89267;">Html</span>
+          <a href="javascript:void(0)" class="skill" id="0">
+            <span style="color: #F89267;">Html</span>
           </a>
         </li>
         <li class="line"><span class="linenumber">3</span>
-          <a href="javascript:void(0)">
-          <span class="skill" id="1" style="color: #5f88e8;">Css</span>
+          <a href="javascript:void(0)" class="skill" id="1">
+          <span style="color: #5f88e8;">Css</span>
           </a>
         </li>
         <li class="line"><span class="linenumber">4</span>
-          <a href="javascript:void(0)">
-          <span class="skill" id="2" style="color: #F3DF49">JavaScript</span>
+          <a href="javascript:void(0)" class="skill" id="2">
+          <span style="color: #F3DF49">JavaScript</span>
           </a>
         </li>
         <li class="line"><span class="linenumber">5</span>
-          <a href="javascript:void(0)">
-          <span class="skill" id="3" style="color: #fa6f68;">Laravel</span>
+          <a href="javascript:void(0)" class="skill" id="3">
+          <span style="color: #fa6f68;">Laravel</span>
           </a>
         </li>
         <li class="line"><span class="linenumber">6</span>
-          <a href="javascript:void(0)">
-          <span class="skill" id="4" style="color: #0d8ca9;">MySQL</span>
+          <a href="javascript:void(0)" class="skill" id="4">
+          <span style="color: #0d8ca9;">MySQL</span>
           </a>
         </li>
         <li class="line"><span class="linenumber">7</span>
-          <a href="javascript:void(0)">
-          <span class="skill" id="5" style="color: #8e7ef4;">PHP</span>
+          <a href="javascript:void(0)" class="skill" id="5">
+          <span style="color: #8e7ef4;">PHP</span>
           </a>
         </li>
         <li class="line"><span class="linenumber">8</span>
-          <a href="javascript:void(0)">
-          <span class="skill" id="6" style="color: #b8bec8">Github</span>
+          <a href="javascript:void(0)" class="skill" id="6">
+          <span style="color: #b8bec8">Github</span>
           </a>
         </li>
         <li class="line"><span class="linenumber">9</span>
-          <a href="javascript:void(0)">
-          <span class="skill" id="7" style="color: #7E13F8;">Bootstrap</span>
+          <a href="javascript:void(0)" class="skill" id="7">
+          <span style="color: #7E13F8;">Bootstrap</span>
           </a>
         </li>
         <li class="line"><span class="linenumber">10</span>
-          <a href="javascript:void(0)">
-          <span class="skill" id="8" style="color: #76a5e6;">jQuery</span>
+          <a href="javascript:void(0)" class="skill" id="8">
+          <span style="color: #76a5e6;">jQuery</span>
           </a>
         </li>
         <li class="line"><span class="linenumber">11</span>
-          <a href="javascript:void(0)">
-          <span class="skill" id="9" style="color: #b1f0f9;">UIkit</span>
+          <a href="javascript:void(0)" class="skill" id="9">
+          <span style="color: #b1f0f9;">UIkit</span>
           </a>
         </li>
         <li class="line"><span class="linenumber">12</span>
-          <a href="javascript:void(0)">
-          <span class="skill" id="10" style="color: #00979C;">Arduino</span>
+          <a href="javascript:void(0)" class="skill" id="10">
+          <span style="color: #00979C;">Arduino</span>
           </a>
         </li>
         <li class="line"><span class="linenumber">13</span>

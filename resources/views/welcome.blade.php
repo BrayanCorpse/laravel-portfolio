@@ -22,7 +22,7 @@
   @error('email')
   <div class="container grid-xs">
     <div class="columns">
-      <div class="toast toast-error text-center">
+      <div class="toast toast-my-error text-center">
         <button class="btn btn-clear float-right" onclick="closeToast(this)"></button>
         {{ $message }}
       </div>
