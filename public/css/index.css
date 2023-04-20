@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700");
-@import url('https://fonts.cdnfonts.com/css/krub-2');
 @import url('https://fonts.cdnfonts.com/css/kshandwrt');
+@import url('https://fonts.cdnfonts.com/css/healing-fairy-signature');
+@import url('https://fonts.cdnfonts.com/css/mercusuar');
+@import url('https://fonts.cdnfonts.com/css/kt-nirma');
+@import url('https://fonts.cdnfonts.com/css/encode-sans');
 
 *::before, *::after {
   box-sizing: border-box;
@@ -18,7 +21,7 @@ html {
 body {
   margin: 0;
   font-size: 14px;
-  font-family: 'Krub', sans-serif;
+  font-family: 'Encode Sans', sans-serif;                                               
   color: #464646;
   line-height: 1.4;
 }
@@ -505,16 +508,12 @@ p code {
 }
 
 .wrapper {
-  display: grid;
+  display: flex;
   font-family: 'kshandwrt', sans-serif;
   font-size: clamp(1rem, 1rem + 7vw, 6rem);
   font-weight: 700;
   text-transform: uppercase;
   color: #66758c;
-}
-
-.wrapper > div {
-  grid-area: 1/1/-1/-1;
 }
 
 /* Cards */
@@ -1122,6 +1121,138 @@ left: 225px;
   background: #ec4373;
   border-color: #ec4373;
 }
+
+/* Palettes */
+.color-palette {
+  position: relative;
+  width: 100%;
+  display: grid;
+  max-width: 900px;
+}
+.color-palette h1 {
+  font-family: 'Healing Fairy Signature', sans-serif;   
+  font-size: 8em;   
+  font-weight: 600;  
+  margin: 50px; 
+  color: #998291;
+}
+.color-palette h1 sub {
+  font-family: "Encode Sans", sans-serif;
+  font-weight: 100;
+  margin-left: -35px; 
+  color: #AEB5BF;
+}
+.color-palette .plt-name {
+  text-align: center;
+  margin: 25px;
+}
+.color-palette h2 {
+  font-family: 'Mercusuar', sans-serif;
+  font-size: 6em;
+  font-weight: 100;
+  margin-top: -40px;
+  color: #3d3e41;
+}
+.color-palette h3 {
+  font-family: 'KT Nirma', sans-serif;
+  font-size: 7em;
+  font-weight: 600;
+  position: relative;
+}
+.color-palette h3 .overlap {
+  position: absolute;
+  font-weight: 100;
+  top: 18px;
+  left: 22%;
+}
+.color-palette h4 {
+  font-family: 'Healing Fairy Signature', sans-serif;  
+  font-size: 6em;   
+  font-weight: 600; 
+  text-align: start;    
+  color: #66758C;                                  
+}
+.color-palette .sub {
+  font-family: 'Mercusuar', sans-serif;
+  font-weight: 400;      
+  margin-left: -35px;                                                                                    
+}
+.color-palette ul {
+  display: block;
+}
+.color-palette .top-list {
+  display: inline;
+  width: 22%;
+  height: 250px;
+  float: left;
+  margin: 10px 1em 1em 10px;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 100px 100px 0 0;
+}
+.color-palette .center-list {
+  display: inline;
+  width: 22%;
+  height: 20px;
+  float: left;
+  margin: 0 1em 0 10px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.color-palette .center-list a {
+  text-decoration: none;
+  color: inherit;
+}
+.color-palette .under-list {
+  display: inline;
+  width: 22%;
+  height: 50px;
+  float: left;
+  margin: 14px 1em 5em 10px;
+  text-align: center;
+  overflow: hidden;
+}
+.color-palette  .top-list:hover {
+  color: #fff;
+}
+/* anim */
+.color-palette  .top-list, .color-palette .center-list, .color-palette .under-list {
+  -webkit-transition: all 0.55s ease-in-out;
+  -moz-transition: all 0.55s ease-in-out;
+  transition: all 0.55s ease-in-out;
+}
+@media handheld, only screen and (max-width: 700px) {
+  .color-palette .top-list {
+    width: 17.8%;
+    height: 100px;
+  }
+  .color-palette .center-list {
+    width: 17.8%;
+  }
+  .color-palette .under-list {
+    width: 17.8%;
+  }
+  .color-palette h1 {
+    font-size: 3em;
+  }
+  .color-palette h1 sub {
+    margin-left: -15px;
+  }
+  .color-palette h3 {
+    font-size: 4em;
+  }
+  .color-palette h3 .overlap{
+    display: none;
+  }
+  .color-palette h4 {
+    font-size: 4em;
+  }
+  .color-palette .sub {
+    margin-left: -18px;
+  }
+}
+
 
 @media only screen and (max-width: 600px) {
     .btn--primary {

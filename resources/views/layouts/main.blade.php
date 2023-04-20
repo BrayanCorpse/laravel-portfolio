@@ -32,14 +32,57 @@
 </head>
 <body>
   <div class="cursor"></div>
+
   @include('layouts.partials.navbar')
+  @include('layouts.partials.partialNav')
 
   <div class="page-container">
+    
+    <header class="header-bmc">
+      <div class="logo-bmc">
+        <a class="btn btn-link" href="{{url('/')}}">
+          <img src="{{asset('images/BMC.png')}}" alt="Brayan Manzano" width="100" height="100">
+        </a>
+      </div>
+    </header>
+
+      @if (Session::has('success'))
+      <div class="container grid-xs">
+        <div class="columns">
+          <div class="toast toast-primary text-center">
+            <button class="btn btn-clear float-right" onclick="closeToast(this)"></button>
+            {{ Session::get('success') }}
+          </div>
+        </div>
+      </div>
+    @endif
+
+    @error('email')
+    <div class="container grid-xs">
+      <div class="columns">
+        <div class="toast toast-my-error text-center">
+          <button class="btn btn-clear float-right" onclick="closeToast(this)"></button>
+          {{ $message }}
+        </div>
+      </div>
+    </div>
+    @enderror
+
     @yield('content')
+
   </div>
+
+  @include('components.footer')
+
+ 
    
-  {{-- <script src="{{asset('js/index.js')}}"></script>  --}}
+  <script src="{{asset('js/index.js')}}"></script> 
   <script src="{{asset('js/cursor.js')}}"></script>
+  <script>
+    function closeToast(toast) {
+      toast.parentNode.remove();
+    }
+  </script>  
   @stack('js')
 </body>
 

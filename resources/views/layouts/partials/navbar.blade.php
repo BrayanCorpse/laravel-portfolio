@@ -10,30 +10,29 @@
                 <a href="#" id="closeMenu">Close</a>
             </div>
             <div class="navbar-modal-body">
+
                 <div class="menu-col">
-                    <p class="item font-bold">Design</p>
-                    <p class="item"><a class="b-link" href="#">Tutorials</a></p>
-                    <p class="item"><a class="b-link" href="#">Playground</a></p>
-                    <p class="item"><a class="b-link" href="#">Blueprints</a></p>
-                    <p class="item"><a class="b-link" href="#">Collective</a></p>
-                    <p class="item"><a class="b-link" href="#">CSS Reference</a></p>
+                    <p class="item font-bold">Tutorials</p>
+                    <p class="item"><a class="b-link" href="#">HTML</a></p>
+                    <p class="item"><a class="b-link" href="#">Css</a></p>
+                    <p class="item"><a class="b-link" href="#">JavaScript</a></p>
+                    <p class="item"><a class="b-link" href="#">Laravel</a></p>
+                    <p class="item"><a class="b-link" href="#">PHP</a></p>
+                    <p class="item"><a class="b-link" href="#">MySQL</a></p>
                 </div>
 
                 <div class="menu-col">
-                    <p class="item font-bold">Reference</p>
-                    <p class="item"><a class="b-link" href="#">Webinars</a></p>
-                    <p class="item"><a class="b-link" href="#">e-Books</a></p>
-                    <p class="item"><a class="b-link" href="">Blog</a></p>
-                    <p class="item"><a class="b-link" href="#">e-Course</a></p>
+                    <p class="item font-bold">Resources</p>
+                    <p class="item"><a class="b-link" href="#">Color Palettes</a></p>
+                    <p class="item"><a class="b-link" href="#">libraries</a></p>
+                    <p class="item"><a class="b-link" href="#">fonts</a></p>
                 </div>
 
                 <div class="menu-col">
-                    <p class="item font-bold">Search Categories</p>
-                    <p class="item"><a class="b-link" href="#">All Categories</a></p>
-                    <p class="item"><a class="b-link" href="#">Business Templates</a></p>
-                    <p class="item"><a class="b-link" href="#">Consulting</a></p>
-                    <p class="item"><a class="b-link" href="#">Memberships</a></p>
-                    <p class="item"><a class="b-link" href="#">Sustaining Members</a></p>
+                    <p class="item font-bold">Articles</p>
+                    <p class="item"><a class="b-link" href="#">Web Development</a></p>
+                    <p class="item"><a class="b-link" href="#">Marketing</a></p>
+                    <p class="item"><a class="b-link" href="#">SEO</a></p>
                 </div>
 
                 <div class="search-col">

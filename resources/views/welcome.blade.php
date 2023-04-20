@@ -2,33 +2,6 @@
 
 @section('content')
 
-  <header class="header-bmc">
-    <div class="logo-bmc">
-      <img src="{{asset('images/BMC.png')}}" alt="Brayan Manzano" width="100" height="100">
-    </div>
-  </header>
-
-  @if (Session::has('success'))
-    <div class="container grid-xs">
-      <div class="columns">
-        <div class="toast toast-primary text-center">
-          <button class="btn btn-clear float-right" onclick="closeToast(this)"></button>
-          {{ Session::get('success') }}
-        </div>
-      </div>
-    </div>
-  @endif
-
-  @error('email')
-  <div class="container grid-xs">
-    <div class="columns">
-      <div class="toast toast-my-error text-center">
-        <button class="btn btn-clear float-right" onclick="closeToast(this)"></button>
-        {{ $message }}
-      </div>
-    </div>
-  </div>
-  @enderror
 
   <section class="section intro">
       <h1 class="section-heading gft-font">
@@ -63,17 +36,6 @@
 
     @include('components.skills')
 
-    @include('components.footer')
     
 
 @endsection
-
-@push('js')
-
-<script>
-  function closeToast(toast) {
-    toast.parentNode.remove();
-  }
-</script>
-    
-@endpush

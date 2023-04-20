@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LikeController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\PaletteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,8 @@ use App\Http\Controllers\ContactController;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/color-palette', [PaletteController::class, 'showPalettes'])->name('color-palette');
 
 Route::post('/like', [LikeController::class, 'like'])->name('like');
 

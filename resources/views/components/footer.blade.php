@@ -2,7 +2,7 @@
     @include('layouts.partials.header', ['sectionName' => 'MY Social', 'placeContent' => 'center', 'size' => 'clamp(1rem, 1rem + 7vw, 4rem);'])
 </div>
   
-<section class="social-section bg-gray">
+<section class="social-section bg-gray" id="foo">
   <div class="social-container">
       <div class="tip">Links</div>
       <div class="share-window">
