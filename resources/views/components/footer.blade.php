@@ -1,4 +1,4 @@
-<div class="bg-light" style="padding-top: 1rem;">
+<div class=" bg-secondary" style="padding-top: 1rem;">
     @include('layouts.partials.header', ['sectionName' => 'MY Social', 'placeContent' => 'center', 'size' => 'clamp(1rem, 1rem + 7vw, 4rem);'])
 </div>
   

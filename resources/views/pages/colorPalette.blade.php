@@ -7,44 +7,39 @@
     <h1>C <sub>olor Palette</sub></h1>
     <h2 class="text-center">inspiration</h2>
     <h3 class="text-center">
-      <span style="color: #9A8793">M</span>
-      <span style="color: #53937F">O</span>
-      <span style="color: #DEA25A">N</span>
-      <span style="color: #D2DEE6">T</span>
-      <span style="color: #6969A7">H</span>
-      <span style="color: #C3ACA8">S</span>
+      @foreach ($colors as $key=> $co)
+        <span style="color: {{$co}}; text-transform: uppercase;">{{ $paletteName[$key] }}</span>
+      @endforeach
+
       <div class="overlap">
-        <span style="color: #9A8793">M</span>
-        <span style="color: #53937F">O</span>
-        <span style="color: #DEA25A">N</span>
-        <span style="color: #D2DEE6">T</span>
-        <span style="color: #6969A7">H</span>
-        <span style="color: #C3ACA8">S</span>
+        @foreach ($colors as $key=> $co)
+          <span style="color: {{$co}}; text-transform: uppercase;">{{ $paletteName[$key] }}</span>
+        @endforeach
       </div>
     </h3>
 
 
-    @foreach ($palettes as $palette)
+    @foreach ($codeColors as $codeColor)
       <div class="plt-name" style="padding-top: 2rem;">
-        <h4> {{ $palette->name[0] }}
-          <sub class="sub">{{ Str::after($palette->name, $palette->name[0]) }}</sub>
-        </h4>
+          <h4> {{ $codeColor->title[0] }}
+            <sub class="sub">{{ Str::after($codeColor->title, $codeColor->title[0]) }}</sub>
+          </h4>
       </div>
       <ul>
-        <li class="top-list" style="background-color: {{ $palette->color1 }}"></li>
-        <li class="top-list" style="background-color: {{ $palette->color2 }}"></li>
-        <li class="top-list" style="background-color: {{ $palette->color3 }}"></li>
-        <li class="top-list" style="background-color: {{ $palette->color4 }}"></li>
+        <li class="top-list" style="background-color: {{ $codeColor->color1 }}"></li>
+        <li class="top-list" style="background-color: {{ $codeColor->color2 }}"></li>
+        <li class="top-list" style="background-color: {{ $codeColor->color3 }}"></li>
+        <li class="top-list" style="background-color: {{ $codeColor->color4 }}"></li>
 
-        <li class="center-list"><a href="#"> {{ $palette->color1 }} </a></li>
-        <li class="center-list"><a href="#"> {{ $palette->color2 }} </a></li>
-        <li class="center-list"><a href="#"> {{ $palette->color3 }} </a></li>
-        <li class="center-list"><a href="#"> {{ $palette->color4 }} </a></li>
+        <li class="center-list"><a href="#"> {{ $codeColor->color1 }} </a></li>
+        <li class="center-list"><a href="#"> {{ $codeColor->color2 }} </a></li>
+        <li class="center-list"><a href="#"> {{ $codeColor->color3 }} </a></li>
+        <li class="center-list"><a href="#"> {{ $codeColor->color4 }} </a></li>
 
-        <li class="under-list" style="background-color: {{ $palette->color1 }}"></li>
-        <li class="under-list" style="background-color: {{ $palette->color2 }}"></li>
-        <li class="under-list" style="background-color: {{ $palette->color3 }}"></li>
-        <li class="under-list" style="background-color: {{ $palette->color4 }}"></li>
+        <li class="under-list" style="background-color: {{ $codeColor->color1 }}"></li>
+        <li class="under-list" style="background-color: {{ $codeColor->color2 }}"></li>
+        <li class="under-list" style="background-color: {{ $codeColor->color3 }}"></li>
+        <li class="under-list" style="background-color: {{ $codeColor->color4 }}"></li>
       </ul>
     @endforeach
 
@@ -69,7 +64,7 @@
       const copyMsg = document.createElement('strong');
             copyMsg.innerText = 'Copied';
 
-        hexCode[i].appendChild(copyMsg);
+        hexCode[i].prepend(copyMsg);
 
         document.body.appendChild(textArea);
         textArea.select();

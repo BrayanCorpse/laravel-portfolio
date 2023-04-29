@@ -35,6 +35,7 @@
 
   @include('layouts.partials.navbar')
   @include('layouts.partials.partialNav')
+  
 
   <div class="page-container">
     
@@ -70,10 +71,11 @@
 
     @yield('content')
 
+    @include('components.footer')
+
   </div>
 
-  @include('components.footer')
-
+ 
  
    
   <script src="{{asset('js/index.js')}}"></script> 

@@ -13,9 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('palettes', function (Blueprint $table) {
+        Schema::create('code_colors', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('color1');
+            $table->string('color2');
+            $table->string('color3');
+            $table->string('color4');
+            $table->integer('shade_id')->unsigned();
+
+            $table->foreign('shade_id')->references('id')->on('shades')->onDelete('cascade');
+
             $table->timestamps();
             $table->softDeletes();
         });
@@ -28,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('paletes');
+        //
     }
 };

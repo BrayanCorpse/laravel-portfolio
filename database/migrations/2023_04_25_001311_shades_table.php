@@ -13,9 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('palettes', function (Blueprint $table) {
+        Schema::create('shades', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('title');
+            $table->integer('palette_id')->unsigned();
+
+            $table->foreign('palette_id')->references('id')->on('palettes')->onDelete('cascade');
+
             $table->timestamps();
             $table->softDeletes();
         });
@@ -28,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('paletes');
+        Schema::dropIfExists('shades');
     }
 };

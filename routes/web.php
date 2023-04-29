@@ -20,7 +20,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/palettes', [PaletteController::class, 'index'])->name('palettes');
 Route::get('/color-palette', [PaletteController::class, 'showPalettes'])->name('color-palette');
+
 
 Route::post('/like', [LikeController::class, 'like'])->name('like');
 
