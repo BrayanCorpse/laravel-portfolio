@@ -47,11 +47,11 @@
       </div>
     </header>
 
-      @if (Session::has('success'))
+    @if (Session::has('success'))
       <div class="container grid-xs">
         <div class="columns">
           <div class="toast toast-primary text-center">
-            <button class="btn btn-clear float-right" onclick="closeToast(this)"></button>
+            <button class="btn btn-clear float-left" onclick="closeToast(this)"></button>
             {{ Session::get('success') }}
           </div>
         </div>
@@ -62,7 +62,7 @@
     <div class="container grid-xs">
       <div class="columns">
         <div class="toast toast-my-error text-center">
-          <button class="btn btn-clear float-right" onclick="closeToast(this)"></button>
+          <button class="btn btn-clear float-left" onclick="closeToast(this)"></button>
           {{ $message }}
         </div>
       </div>
