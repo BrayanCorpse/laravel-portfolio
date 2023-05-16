@@ -6,40 +6,42 @@
   
     <h1>C <sub>olor Palette</sub></h1>
     <h2 class="text-center">inspiration</h2>
-    <h3 class="text-center">
-      @foreach ($colors as $key=> $co)
-        <span style="color: {{$co}}; text-transform: uppercase;">{{ $paletteName[$key] }}</span>
-      @endforeach
+    <h3 class="text-center" style="position: relative;">
+      <div>
+        @foreach ($paletteName as $key=> $pa)
+          <span style="text-transform: uppercase; color:{{ $colors[$key] }}">{{ $pa }}</span>
+        @endforeach
+      </div>
 
       <div class="overlap">
-        @foreach ($colors as $key=> $co)
-          <span style="color: {{$co}}; text-transform: uppercase;">{{ $paletteName[$key] }}</span>
+        @foreach ($paletteName as $key=> $pa)
+          <span style="text-transform: uppercase; color:{{ $colors[$key] }}">{{ $pa }}</span>
         @endforeach
       </div>
     </h3>
 
 
-    @foreach ($codeColors as $codeColor)
+    @foreach ($shades as $shade)
       <div class="plt-name" style="padding-top: 2rem;">
-          <h4> {{ $codeColor->title[0] }}
-            <sub class="sub">{{ Str::after($codeColor->title, $codeColor->title[0]) }}</sub>
+          <h4> {{ $shade->title[0] }}
+            <sub class="sub">{{ Str::after($shade->title, $shade->title[0]) }}</sub>
           </h4>
       </div>
       <ul>
-        <li class="top-list" style="background-color: {{ $codeColor->color1 }}"></li>
-        <li class="top-list" style="background-color: {{ $codeColor->color2 }}"></li>
-        <li class="top-list" style="background-color: {{ $codeColor->color3 }}"></li>
-        <li class="top-list" style="background-color: {{ $codeColor->color4 }}"></li>
+        <li class="top-list" style="background-color: {{ $shade->color1 }}"></li>
+        <li class="top-list" style="background-color: {{ $shade->color2 }}"></li>
+        <li class="top-list" style="background-color: {{ $shade->color3 }}"></li>
+        <li class="top-list" style="background-color: {{ $shade->color4 }}"></li>
 
-        <li class="center-list"><a href="#"> {{ $codeColor->color1 }} </a></li>
-        <li class="center-list"><a href="#"> {{ $codeColor->color2 }} </a></li>
-        <li class="center-list"><a href="#"> {{ $codeColor->color3 }} </a></li>
-        <li class="center-list"><a href="#"> {{ $codeColor->color4 }} </a></li>
+        <li class="center-list"><a href="#"> {{ $shade->color1 }} </a></li>
+        <li class="center-list"><a href="#"> {{ $shade->color2 }} </a></li>
+        <li class="center-list"><a href="#"> {{ $shade->color3 }} </a></li>
+        <li class="center-list"><a href="#"> {{ $shade->color4 }} </a></li>
 
-        <li class="under-list" style="background-color: {{ $codeColor->color1 }}"></li>
-        <li class="under-list" style="background-color: {{ $codeColor->color2 }}"></li>
-        <li class="under-list" style="background-color: {{ $codeColor->color3 }}"></li>
-        <li class="under-list" style="background-color: {{ $codeColor->color4 }}"></li>
+        <li class="under-list" style="background-color: {{ $shade->color1 }}"></li>
+        <li class="under-list" style="background-color: {{ $shade->color2 }}"></li>
+        <li class="under-list" style="background-color: {{ $shade->color3 }}"></li>
+        <li class="under-list" style="background-color: {{ $shade->color4 }}"></li>
       </ul>
     @endforeach
 

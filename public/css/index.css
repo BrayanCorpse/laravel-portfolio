@@ -1158,12 +1158,14 @@ left: 225px;
   font-size: 7em;
   font-weight: 600;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 .color-palette h3 .overlap {
-  position: absolute;
+  position: absolute; 
   font-weight: 100;
-  top: 18px;
-  left: 22%;
+  margin-top: 18px;
+  margin-left: 22px;
 }
 .color-palette h4 {
   font-family: 'Healing Fairy Signature', sans-serif;  
@@ -1251,6 +1253,21 @@ left: 225px;
   .color-palette .sub {
     margin-left: -18px;
   }
+}
+
+.palettes {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.palettes h1 {
+  font-family: 'Healing Fairy Signature', sans-serif;
+  font-size: 6rem;
+  font-weight: 600;
+  line-height: initial;
+  color: #8b8bc5;
+  margin: 0;
 }
 
 

@@ -16,6 +16,8 @@ return new class extends Migration
         Schema::create('palettes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->string('slug');
+            $table->string('url');
             $table->timestamps();
             $table->softDeletes();
         });

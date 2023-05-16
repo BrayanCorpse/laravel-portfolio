@@ -2,7 +2,7 @@
 
 @section('content')
 
-<section class="section">
+<section class="palettes">
     <h1>Palettes</h1>
 </section>
 @include('components.generalCards')

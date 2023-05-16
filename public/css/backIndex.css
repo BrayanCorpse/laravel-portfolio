@@ -1,0 +1,121 @@
+body {
+  padding: 2rem 0 0 6.75rem;
+  transition: 0.5s;
+}
+/*===== l NAV =====*/
+.l-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: -webkit-fill-available;
+  background-color: #313440;
+  color: #fff;
+  padding: 1.5rem 1.5rem 2rem;
+  transition: 0.5s;
+  z-index: 100;
+}
+
+/*===== NAV =====*/
+.nav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.nav__brand {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.nav__toggle {
+  font-size: 1.25rem;
+  padding: 0.75rem;
+  cursor: pointer;
+}
+.nav__logo {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none !important;
+}
+
+.nav__link {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  align-items: center;
+  column-gap: 0.75rem;
+  padding: 0.75rem;
+  color: #fff;
+  margin-bottom: 0.2rem;
+  transition: 0.3s;
+  cursor: pointer;
+  text-decoration: none !important;
+  box-shadow: none !important;
+}
+.nav__link:hover {
+  background-color: #313440;
+  color: #fff;
+}
+.nav__icon {
+  font-size: 1.25rem;
+}
+.nav__name {
+  font-size: 0.875rem;
+}
+
+/*Expander menu*/
+.expander {
+  width: calc(100px + 9.25rem);
+}
+
+/*Add padding body*/
+.body-pd {
+  padding: 1rem 0 0 16rem;
+}
+.name__section {
+  font-size: 3em;
+}
+/*Active links menu*/
+.active {
+  background-color: #313440;
+}
+
+/*===== COLLAPSE =====*/
+.collapse {
+  grid-template-columns: 20px max-content 1fr;
+}
+.collapse__link {
+  justify-self: flex-end;
+  transition: 0.5s;
+}
+.collapse__menu {
+  display: none;
+  padding: 0.75rem 2.25rem;
+}
+.collapse__sublink {
+  color: #b6cefc;
+  font-size: 0.875rem;
+  text-decoration: none !important;
+}
+.collapse__sublink:hover {
+  color: #fff;
+}
+
+/*Show collapse*/
+.showCollapse {
+  display: block;
+}
+
+/*Rotate icon*/
+.rotate {
+  transform: rotate(180deg);
+}
+
+@media only screen and (max-width: 600px) {
+  .name__section {
+    font-size: 2em;
+  }
+}

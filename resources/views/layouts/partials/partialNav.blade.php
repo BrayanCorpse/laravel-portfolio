@@ -200,7 +200,7 @@ background-image: linear-gradient(to right bottom, #807fe2, #8178db, #8271d4, #8
           </a>
         </li>
         <li>
-          <a href="{{route('color-palette')}}">
+          <a href="{{route('palettes')}}">
             Resources
           </a>
         </li>

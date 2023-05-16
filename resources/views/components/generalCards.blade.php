@@ -59,12 +59,14 @@
     </style>
     
 <main class="section">
-        <div class=" section-container">
-            <ul class="img-list">
-                <a href="{{route('color-palette')}}">
-                    <li><img src="{{asset('images/palettes/months.jpg')}}"></li>
-                </a>  
-                {{-- <li><img src="{{asset('images/palettes/medios.jpg')}}"></li> --}}
-            </ul>  
-        </div>     
+  <div class="section-container">
+      <ul class="img-list">
+        @foreach ($palettes as $palette)
+          <a href="{{route('showPalettes', ['paname' => $palette->name ])}}">
+              <li><img src="{{asset('images/palettes/'.$palette->name.'.jpg')}}"></li>
+          </a> 
+        @endforeach 
+          {{-- <li><img src="{{asset('images/palettes/medios.jpg')}}"></li> --}}
+      </ul>  
+  </div>     
 </main>

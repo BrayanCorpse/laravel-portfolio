@@ -10,6 +10,11 @@ class Shade extends Model
     use HasFactory;
 
     protected $fillable = [
-        'title'
+        'title',
+        'color1',
+        'color2',
+        'color3',
+        'color4',
+        'palette_id'
     ];
 }

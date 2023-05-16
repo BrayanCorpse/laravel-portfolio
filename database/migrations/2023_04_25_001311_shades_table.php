@@ -16,6 +16,10 @@ return new class extends Migration
         Schema::create('shades', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
+            $table->string('color1');
+            $table->string('color2');
+            $table->string('color3');
+            $table->string('color4');
             $table->integer('palette_id')->unsigned();
 
             $table->foreign('palette_id')->references('id')->on('palettes')->onDelete('cascade');

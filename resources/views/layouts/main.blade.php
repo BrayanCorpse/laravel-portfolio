@@ -17,10 +17,10 @@
     <meta content="{{asset('apple-touch-icon.png')}}" property="og:image">
     <meta content="Brayan Manzano Web Developer." property="og:description">
     <title>Brayan Manzano</title>
-    <link rel="shortcut icon" href="favicon.ico" type="{{asset('favicon.ico')}}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('apple-touch-icon.png')}}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('favicon-32x32.png')}}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('favicon-16x16.png')}}">
+    <link rel="shortcut icon" href="{{asset('favicons/favicon.ico')}}" type="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('favicons/apple-touch-icon.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('favicons/favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('favicons/favicon-16x16.png')}}">
     <meta name="msapplication-TileColor" content="#807FE2">
     <meta name="theme-color" content="#807FE2">
     <meta name="csrf-token" content="{{ csrf_token() }}">
