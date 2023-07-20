@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('slug');
             $table->string('url');
+            $table->enum('type', ['horizontal', 'vertical', 'circular'])->default('horizontal');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -30,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('paletes');
+        Schema::dropIfExists('palettes');
     }
 };

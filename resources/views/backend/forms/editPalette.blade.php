@@ -1,10 +1,11 @@
 @extends('backend.layouts.main')
 
-@section('name__section', 'New Palette')
+@section('name__section', 'Edit Palette')
 
 @section('content')
-<form action="{{ route('storePalette') }}" method="POST" enctype="multipart/form-data">
-  @csrf @method('POST')
+<form action="{{ route('updatePalette',  ['palette' => $palette->id]) }}" 
+  method="POST" enctype="multipart/form-data">
+  @csrf @method('PATCH')
   <div class="docs-demo columns bmc-center">
     <div class="column col-9 col-sm-11">
 

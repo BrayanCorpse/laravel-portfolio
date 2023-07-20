@@ -46,7 +46,7 @@ class ContactMail extends Mailable
     public function content()
     {
         return new Content(
-            view: 'mails.ContactMail',
+            view: 'mails.contactMail',
         );
     }
 

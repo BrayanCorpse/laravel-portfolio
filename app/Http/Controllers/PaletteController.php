@@ -7,12 +7,14 @@ use App\Models\Shade;
 use App\Models\Palette;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Arr;
 
 class PaletteController extends Controller
 {
     public function index(){
-        $palettes = Palette::select('id', 'name')->get();
+        $palettes = Palette::select('id', 'name', 'slug', 'url')
+                            ->orderBy('created_at', 'desc')
+                            ->get();
+                 
         return view('pages.palettes',compact('palettes'));
     }
 
@@ -20,7 +22,7 @@ class PaletteController extends Controller
 
         $shades = DB::table('shades')
                     ->join('palettes', 'palettes.id', '=', 'shades.palette_id')
-                    ->select('shades.title','shades.color1','shades.color2','shades.color3','shades.color4','shades.palette_id')
+                    ->select('shades.title','shades.color1','shades.color2','shades.color3','shades.color4','shades.palette_id', 'palettes.type', 'palettes.name')
                     ->where('palettes.slug', $paname)
                     ->get();
         
@@ -31,7 +33,7 @@ class PaletteController extends Controller
 
         $paletteName = str_split($palette[0]->name);
 
-        $colors = Str::of('#9A8793,#53937F,#DEA25A,#D2DEE6,#6969A7,#C5AFAB,#191825,#A500F7')->split('/[\s,]+/');
+        $colors = Str::of('#9A8793,#53937F,#DEA25A,#D2DEE6,#6969A7,#C5AFAB,#6EA7B1,#F5D9D6')->split('/[\s,]+/');
 
         return view('pages.colorPalette', compact('shades','paletteName','colors'));
 
