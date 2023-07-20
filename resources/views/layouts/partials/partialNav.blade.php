@@ -206,7 +206,7 @@ background-image: linear-gradient(to right bottom, #807fe2, #8178db, #8271d4, #8
         </li>
   
         <li>
-          <a href="https://laravel-portfolio.test/assets/CV Brayan Manzano.pdf" download="CV Brayan Manzano">
+          <a href="{{asset('assets/CV Brayan Manzano.pdf')}}" download="CV Brayan Manzano">
             Resume
           </a>
         </li>
