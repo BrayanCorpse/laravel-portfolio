@@ -1116,12 +1116,6 @@ left: 225px;
 .get-in .mail{
     margin: 10px;
 }
-
-.toast.toast-my-error {
-  background: #ec4373;
-  border-color: #ec4373;
-}
-
 /* Palettes */
 .imglist {
   list-style-type: none;

@@ -78,32 +78,12 @@
       </div>
     </header>
 
-    @if (Session::has('success'))
-      <div class="container grid-xs">
-        <div class="columns">
-          <div class="toast toast-primary text-center">
-            <button class="btn btn-clear float-left" onclick="closeToast(this)"></button>
-            {{ Session::get('success') }}
-          </div>
-        </div>
-      </div>
-    @endif
-
-    @error('email')
-    <div class="container grid-xs">
-      <div class="columns">
-        <div class="toast toast-my-error text-center">
-          <button class="btn btn-clear float-left" onclick="closeToast(this)"></button>
-          {{ $message }}
-        </div>
-      </div>
-    </div>
-    @enderror
+    @include('components.toast')
 
     <section>
       @yield('content')
-    </section>
-  
+    </section> 
+
     @include('components.footer')
 
   </div>
@@ -113,11 +93,6 @@
    
   <script src="{{asset('js/index.js')}}"></script> 
   <script src="{{asset('js/cursor.js')}}"></script>
-  <script>
-    function closeToast(toast) {
-      toast.parentNode.remove();
-    }
-  </script>  
   @stack('js')
 </body>
 

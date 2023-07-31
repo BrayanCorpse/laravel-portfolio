@@ -19,9 +19,6 @@ class ContactController extends Controller
         $data = [
             'email' => $request->email
         ];
-
-        $contact = new Contact($data);
-        $contact->save(); 
           
         $emails = [
             'firstEmail' => $request->email,
@@ -29,6 +26,9 @@ class ContactController extends Controller
         ];
 
         Mail::to( $emails )->send(new ContactMail($data));
+
+        $contact = new Contact($data);
+        $contact->save(); 
 
         return redirect()->back()->with('success', 'Tu mensaje ha sido enviado correctamente.');
     }
