@@ -25,12 +25,12 @@
   <!-- Meta Facebook -->
     <meta property="og:locale" content="es_MX">
     <meta property="og:type" content="website"> 
-    <meta content="@yield('ogtitle', ' Brayan Manzano Web Developer')" property="og:title">
-    <meta content="@yield('ogdescription', 'Brayan Manzano Web Developer.')" property="og:description">
-    <meta content="@yield('ogurl', 'https://brayanmanzano.dev')" property="og:url">
+    <meta property="og:title" content="@yield('ogtitle', ' Brayan Manzano Web Developer')">
+    <meta property="og:description" content="@yield('ogdescription', 'Brayan Manzano Web Developer.')" >
+    <meta property="og:url" content="@yield('ogurl', 'https://brayanmanzano.dev')">
     <meta property="og:site_name" content="Brayan Manzano">  
     <meta property="article:publisher" content="https://www.facebook.com/bryan.manzanocortes">
-    <meta content="{{asset('images/BMC.png')}}" property="og:image">
+    <meta property="og:image" content="@yield('ogimage', asset('images/BMC.png'))">
     <meta property="og:image:alt" content="Brayan Manzano Web Developer">
     <meta property="og:image:width" content="1920">
     <meta property="og:image:height" content="1080">
@@ -41,10 +41,10 @@
     <meta name="twitter:title" content="@yield('twtitle','Brayan Manzano Web Developer')">
     <meta name="twitter:description" content="@yield('twdescription', '📌 Hey there, I’m Brayan Manzano! First of all, thanks for visiting my personal website. I’m a Mexican ICT Engineer, Frontend, Backend Developer.')">
     <meta property="twitter:url" content="@yield('twurl','https://brayanmanzano.dev')">
-    <meta name="twitter:image" content="{{asset('images/BMC.png')}}">
+    <meta name="twitter:image" content="@yield('twimage', asset('images/BMC.png'))">
     <meta name="twitter:image:alt" content="Brayan Manzano Web Developer">
   {{-- Favicons --}}
-    <link rel="shortcut icon" href="{{asset('favicons/favicon.ico')}}" type="favicon.ico">
+    <link rel="shortcut icon" href="{{asset('favicons/favicon.ico')}}" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="{{asset('favicons/apple-touch-icon.png')}}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{asset('favicons/favicon-32x32.png')}}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('favicons/favicon-16x16.png')}}">
@@ -100,7 +100,9 @@
     </div>
     @enderror
 
-    @yield('content')
+    <section>
+      @yield('content')
+    </section>
   
     @include('components.footer')
 
