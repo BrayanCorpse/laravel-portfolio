@@ -8,7 +8,7 @@
 		<form action="{{ route('sendMail') }}" method="POST" class="form"> 
 			@csrf 
 			@method('POST')
-			<input type="email" autocomplete="email" name="email" value="{{ old('email') }}" class="form__field" 
+			<input type="email" autocomplete="email" name="email" id="email" value="{{ old('email') }}" class="form__field" 
 					placeholder="Your E-Mail Address" />
 			<button type="submit" class="send-btn btn--primary btn--inside uppercase send-btn">Send</button>
 		</form>
