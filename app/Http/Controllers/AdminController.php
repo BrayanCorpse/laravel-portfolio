@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\PaletteRequest;
 use App\Http\Requests\ShadeRequest;
+use App\Http\Requests\CoverRequest;
+use App\Models\Cover;
 use App\Models\Palette;
 use App\Models\Shade;
 use Illuminate\Support\Facades\Storage;
@@ -191,4 +193,37 @@ class AdminController extends Controller
 
         return redirect()->back()->with('status', 'Shade '. $shade->title.  ' successfully Destroying!');
     }
+
+    public function createCover(){
+
+        return view('backend.forms.createCover', ['cover' => new Cover]);
+    }
+
+    public function storeCover(CoverRequest $request){
+
+        if ($request->hasFile('url')) {
+
+            $cover = new Cover;
+            $cover->title = $request->title;
+
+            $image = $request->file('url');
+            $path = $image->store('seoCovers', 's3');
+
+            $cover->url = $path;
+            $cover->save();
+
+            return to_route('createCover')->with('status', '¡New Cover '. $cover->title.  ' successfully created, continue editing');
+        }
+        
+    }
+
+    public function showCover(Cover $cover){
+
+        $covers =  $cover::select('id', 'title', 'slug', 'url','deleted_at')
+                        ->withTrashed()
+                        ->paginate(2);
+
+        return view('backend.showCover', compact('covers'));
+    }
+
 }

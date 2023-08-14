@@ -1,16 +1,22 @@
 @extends('layouts.main')
 
 @section('title', 'Palette Inspiration | '.Str::upper($shades[0]->name))
-@section('canonical', ''.request()->url())
+@section('canonical', request()->url())
 @section('description','Discover this amazing color palette '.Str::upper($shades[0]->name).'. Find inspiration for your design, illustration, or decoration projects with this beautiful combination of tones.')
 
 @section('ogtitle','Palette Inspiration | '.Str::upper($shades[0]->name))
 @section('ogdescription','Discover this amazing color palette '.Str::upper($shades[0]->name).'. Find inspiration for your design, illustration, or decoration projects with this beautiful combination of tones.')
-@section('ogurl', ''.request()->url() )
+@section('ogurl', request()->url() )
+@section('ogimage', Storage::disk('s3')->url($cover[0]->url) )
 
 @section('twtitle','Palette Inspiration | '.Str::upper($shades[0]->name))
 @section('twdescription','Discover this amazing color palette '.Str::upper($shades[0]->name).'. Find inspiration for your design, illustration, or decoration projects with this beautiful combination of tones.')
-@section('twurl', ''.request()->url())
+@section('twurl', request()->url())
+@section('twimage', Storage::disk('s3')->url($cover[0]->url) )
+
+@section('shared-button')
+  @include('components.shareButton', ['title' => 'Palette Inspiration,'.Str::upper($shades[0]->name), 'url' => Storage::disk('s3')->url($cover[0]->url)])
+@endsection
 
 @section('content')
 

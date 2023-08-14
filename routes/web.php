@@ -47,6 +47,10 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/restoreShade/{shade}', [AdminController::class, 'restoreShade'])->name('restoreShade');
     Route::get('/destroyShade/{shade}', [AdminController::class, 'destroyShade'])->name('destroyShade');
 
+    Route::get('/showCover', [AdminController::class, 'showCover'])->name('showCover');
+    Route::get('/createCover', [AdminController::class, 'createCover'])->name('createCover');
+    Route::post('/storeCover', [AdminController::class, 'storeCover'])->name('storeCover');
+
 
 });
 

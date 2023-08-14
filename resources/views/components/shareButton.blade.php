@@ -21,12 +21,12 @@
       title="whatsapp">
     <i class='bx bxl-whatsapp'></i>
   </a>
-  {{-- <a  href="//pinterest.com/pin/create/link/?url={{ Request::url() }}&media=https://bmcportbucket.s3.amazonaws.com/coverImages/palettes.jpg&description={{ $title }}" 
+  <a  href="//pinterest.com/pin/create/link/?url={{ Request::url() }}&media={{ $url }}&description={{ $title }}" 
       rel="noopener noreferrer nofollow"
       target="_blank" 
       class="share-link google" 
       title="Pinterest">
     <i class='bx bxl-pinterest-alt'></i>
-  </a> --}}
+  </a>
 </div>
 

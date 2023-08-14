@@ -97,10 +97,10 @@
                     </ul>
                 </div>
 
-                <a href="#" class="nav__link">
+                {{-- <a href="#" class="nav__link">
                     <i class='bx bx-cog nav__icon'></i>
                     <span class="nav__name">Settings</span>
-                </a>
+                </a> --}}
 
                 <div class="nav__link collapse">
                     <i class='bx bx-user-plus nav__icon'></i>
@@ -112,7 +112,22 @@
                         <a href="{{ route('register') }}" class="collapse__sublink">
                             Create
                         </a>
-                        <a href="#" class="collapse__sublink">Group</a>
+                    </ul>
+                </div>
+
+                <div class="nav__link collapse">
+                    <i class='bx bx-image nav__icon'></i>
+                    <span class="nav__name">Covers</span>
+
+                    <i class='bx bx-down-arrow collapse__link'></i>
+
+                    <ul class="collapse__menu">
+                        <a href="{{ route('createCover') }}" class="collapse__sublink">
+                            Create
+                        </a>
+                        <a href="{{ route('showCover') }}" class="collapse__sublink">
+                            List
+                        </a>
                     </ul>
                 </div>
 

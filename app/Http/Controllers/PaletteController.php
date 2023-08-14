@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Shade;
 use App\Models\Palette;
+use App\Models\Cover;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
 
@@ -31,11 +30,13 @@ class PaletteController extends Controller
                     ->select('palettes.name')
                     ->get();
 
+        $cover = Cover::select('slug','url')->where('slug', $palette[0]->name)->get();
+
         $paletteName = str_split($palette[0]->name);
 
         $colors = Str::of('#9A8793,#53937F,#DEA25A,#D2DEE6,#6969A7,#C5AFAB,#6EA7B1,#F5D9D6')->split('/[\s,]+/');
 
-        return view('pages.colorPalette', compact('shades','paletteName','colors'));
+        return view('pages.colorPalette', compact('shades','cover','paletteName','colors'));
 
     }
 }

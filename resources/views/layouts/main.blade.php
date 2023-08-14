@@ -58,15 +58,17 @@
 </head>
 <body>
 
-  @if (Route::currentRouteName() != 'home')
-    @include('layouts.partials.verticalBreadcrumb')
-  @endif  
-
   <div class="cursor"></div>
 
   @include('layouts.partials.navbar')
   @include('layouts.partials.partialNav')
-  
+
+  @if (Route::currentRouteName() != 'home')
+    @include('layouts.partials.verticalBreadcrumb')
+  @endif  
+
+  @yield('shared-button')
+    
 
   <div class="page-container">
 
@@ -89,10 +91,9 @@
   </div>
 
  
- 
-   
   <script src="{{asset('js/index.js')}}"></script> 
   <script src="{{asset('js/cursor.js')}}"></script>
+  <script src="{{ asset('js/toast.js') }}" defer></script>
   @stack('js')
 </body>
 
