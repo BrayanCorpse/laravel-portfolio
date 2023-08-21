@@ -75,8 +75,6 @@ class AdminController extends Controller
             $palette->type = $request->type;
             $palette->save();
 
-            $palette->generateSlug();
-
             return to_route('showPalette')->with('status', '¡Palette '. $palette->name.  ' successfully Updated!');
 
         }
@@ -84,6 +82,7 @@ class AdminController extends Controller
             $palette->name = $request->name;
             $palette->type = $request->type;
             $palette->save();
+            $palette->generateSlug();
 
             return to_route('showPalette')->with('status', '¡Palette '. $palette->name.  ' successfully Updated!');
 

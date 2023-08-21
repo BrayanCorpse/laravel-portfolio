@@ -27,10 +27,10 @@ class PaletteController extends Controller
         
         $palette = DB::table('palettes')
                     ->where('palettes.id',$shades[0]->palette_id)
-                    ->select('palettes.name')
+                    ->select('palettes.name', 'palettes.slug')
                     ->get();
 
-        $cover = Cover::select('slug','url')->where('slug', $palette[0]->name)->get();
+        $cover = Cover::select('slug','url')->where('slug', $paname)->get();
 
         $paletteName = str_split($palette[0]->name);
 
