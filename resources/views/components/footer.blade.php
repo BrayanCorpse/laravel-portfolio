@@ -53,7 +53,7 @@
       <p class="copyleft">Developed with 
         <i class='bx bx-heart-circle'></i> 
         <small class="gft-font">Brayan Manzano</small> 
-         © 2023 - All rights reserved
+         © 2024 - All rights reserved
       </p> 
   </div>
   @include('layouts.partials.floatMail')

@@ -20,7 +20,7 @@
       </p>
       <br>
       <div class="">
-        <a href="{{asset('assets/CV Brayan Manzano.pdf')}}" class="fill br-btn" download="CV Brayan Manzano"> 
+        <a href="{{asset('assets/CV-Brayan-MC.pdf')}}" class="fill br-btn" download="CV Brayan Manzano"> 
           Resume 
         </a>
         <a href="https://github.com/BrayanCorpse" target="_blank" rel="noopener noreferrer" class="slide br-btn">
