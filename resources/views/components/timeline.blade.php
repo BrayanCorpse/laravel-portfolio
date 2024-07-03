@@ -13,7 +13,7 @@
                   <div class="timeline-content">
                     <div class="tile">
                       <div class="tile-content">
-                        <p class="tile-subtitle">July 2022 - March 2023</p>
+                        <p class="tile-subtitle">July 2021 - Current</p>
                         <p class="tile-title">
                           <span class="label">Freelance Developer</span>
                         </p>
@@ -35,7 +35,7 @@
                   <div class="timeline-content">
                     <div class="tile">
                       <div class="tile-content">
-                        <p class="tile-subtitle">January 2021 - June 2022</p>
+                        <p class="tile-subtitle">January 2022 - June 2022</p>
                         <p class="tile-title">
                           <span class="label">Web Developer</span>
                         </p>
