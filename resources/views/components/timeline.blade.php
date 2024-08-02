@@ -13,9 +13,9 @@
                   <div class="timeline-content">
                     <div class="tile">
                       <div class="tile-content">
-                        <p class="tile-subtitle">July 2021 - Current</p>
+                        <p class="tile-subtitle">July 2021 - August 2024</p>
                         <p class="tile-title">
-                          <span class="label">Freelance Developer</span>
+                          <span class="label">Web Developer & Community Manager</span>
                         </p>
                         <p class="tile-title">
                           <a href="https://bisturinoticias.com/" target="_blank" rel="noopener noreferrer">Bisturí Noticias</a>: 
